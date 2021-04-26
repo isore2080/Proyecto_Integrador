@@ -53,5 +53,5 @@ public class LoginController {
 		return "intranetLogin";
 
 	}
-//iqweiqhwieuhqiwuehqwiueiuqwheiuqwheiuwqhiehqwiuehqwiuheiuqwheiqhwie
+
 }
