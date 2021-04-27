@@ -63,7 +63,7 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_departamento">Departamento</label>
-				<select id="id_departamento" name= class='form-control'>
+				<select id="id_departamento" name="" class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
