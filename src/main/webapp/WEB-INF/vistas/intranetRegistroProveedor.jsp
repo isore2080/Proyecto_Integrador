@@ -33,7 +33,64 @@
 </div>
 
 <script type="text/javascript">
-<!-- Agregar aquí -->
+$("#id_registrar").click(function (){ 
+
+	var validator = $('#id_form').data('bootstrapValidator');
+	validator.validate();
+
+	if (validator.isValid()){
+		$.ajax({
+			type: 'POST',  
+			data: $("#id_form").serialize(),
+			url: 'registroProveedor',
+			success: function(data){
+				mostrarMensaje(data.MENSAJE);
+				limpiar();
+				validator.resetForm();
+			},
+			error: function(){
+				mostrarMensaje(MSG_ERROR);
+			}
+		});
+	}
+	
+});
+
+$.getJSON("listaDepartamentos",{}, function(data){
+	$.each(data, function(i, item){
+		$("#id_departamento").append("<option value='"+ item +"'>"+ item+"</option>");
+	});
+});
+
+$("#id_departamento").change(function(){
+	var var_dep = $("#id_departamento").val();
+
+	$("#id_provincia").empty();
+	$("#id_provincia").append("<option value=' '>[Seleccione Provincia]</option>");
+
+	$("#id_distrito").empty();
+	$("#id_distrito").append("<option value=' '>[Seleccione Distrito]</option>");
+	
+	$.getJSON("listaProvincias",{"departamento":var_dep}, function(data){
+		$.each(data, function(i, item){
+			$("#id_provincia").append("<option value='"+ item +"'>"+ item+"</option>");
+		});
+	});
+});
+
+$("#id_provincia").change(function(){
+	var var_dep = $("#id_departamento").val();
+	var var_pro = $("#id_provincia").val();
+
+	$("#id_distrito").empty();
+	$("#id_distrito").append("<option value=' '>[Seleccione Distrito]</option>");
+	
+	$.getJSON("listaDistritos",{"departamento":var_dep,"provincia":var_pro}, function(data){
+		$.each(data, function(i, item){
+			$("#id_distrito").append("<option value='"+ item.idUbigeo +"'>"+ item.distrito+"</option>");
+		});
+	});
+});
 
 
 </script>   		
