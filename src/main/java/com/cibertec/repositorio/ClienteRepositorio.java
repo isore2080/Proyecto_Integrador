@@ -1,4 +1,4 @@
-package com.cibertec.repositorio;
+   package com.cibertec.repositorio;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

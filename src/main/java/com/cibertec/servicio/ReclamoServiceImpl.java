@@ -14,10 +14,10 @@ public class ReclamoServiceImpl implements ReclamoService {
 	public Reclamo insertaReclamo(Reclamo obj) {
 		
 		return repositorio.save(obj);
-	}
 	
 	
-		//mañana lo termino
+		
 		
 
+}
 }

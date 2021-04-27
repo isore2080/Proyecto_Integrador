@@ -68,12 +68,12 @@
 				</select>
 		    </div>
 		    
-		   	<div class="form-group">
-				<label class="control-label" for="id_provincia">Provincia</label>
-				<select id="id_provincia" name="" class='form-control'>
-					<option value=" ">[Seleccione Provincia]</option>    
-				</select>
-		    </div>
+		   	 <div class="form-group col-md-6">
+					<label class="control-label" for="id_Cliente">Cliente</label>
+					<select id="id_Cliente" name="cliente.id_cliente" class='form-control'>
+						<option value=" ">[Seleccione]</option>    
+					</select>
+			    </div>
 		    
 		   <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
