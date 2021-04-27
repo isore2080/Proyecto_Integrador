@@ -28,7 +28,64 @@
 <div class="container" style="margin-top: 5%"><h4>Registro Proveedor</h4></div>
 
 <div class="container" style="margin-top: 1%">
-<!-- Agregar aquí -->
+
+<form id="id_form"> 
+
+			<div class="form-group">
+				<label class="control-label" for="id_razonsocial">Razon Social</label>
+				<input class="form-control" type="text" id="id_razonsocial" name="razonsocial" placeholder="Ingrese la razon social" maxlength="40">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_ruc">ruc</label>
+				<input class="form-control" type="text" id="id_ruc" name="ruc" placeholder="Ingrese el ruc" maxlength="">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_direccion">direccion</label>
+				<input class="form-control" type="text" id="id_direccion" name="direccion" placeholder="Ingrese el direccion" maxlength="100">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_telefono">telefono</label>
+				<input class="form-control" type="text" id="id_telefono" name="telefono" placeholder="Ingrese el telefono" maxlength="100">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_celular">celular</label>
+				<input class="form-control" type="text" id="id_celular" name="celular" placeholder="Ingrese el celular" maxlength="100">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_contacto">contacto</label>
+				<input class="form-control" type="text" id="id_contacto" name="contacto" placeholder="Ingrese el contacto" maxlength="100">    
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="id_departamento">Departamento</label>
+				<select id="id_departamento" name="" class='form-control'>
+					<option value=" ">[Seleccione Departamento]</option>    
+				</select>
+		    </div>
+		    
+		   	<div class="form-group">
+				<label class="control-label" for="id_provincia">Provincia</label>
+				<select id="id_provincia" name="" class='form-control'>
+					<option value=" ">[Seleccione Provincia]</option>    
+				</select>
+		    </div>
+		    
+		   <div class="form-group">
+				<label class="control-label" for="id_distrito">Distrito</label>
+				<select id="id_distrito" name="" class='form-control'>
+					<option value=" ">[Seleccione Distrito]</option>    
+				</select>
+		    </div>
+			
+			<div class="form-group">
+				<button id="id_registrar" type="button" class="btn btn-primary" >REGISTRAR</button>
+			</div>
+	</form>
 	
 </div>
 
