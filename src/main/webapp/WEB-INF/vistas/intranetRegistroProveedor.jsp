@@ -29,7 +29,7 @@
 
 <div class="container" style="margin-top: 1%">
 
-<form id="id_form"> 
+<form id="id_form" method="post"> 
 
 			<div class="form-group">
 				<label class="control-label" for="id_razonsocial">Razon Social</label>
@@ -63,26 +63,28 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_departamento">Departamento</label>
-				<select id="id_departamento" name="departamento.idUbigeo" class='form-control'>
+				<select id="id_departamento" name= class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
 		    
 		   	 <div class="form-group">
 				<label class="control-label" for="id_provincia">Provincia</label>
-				<select id="id_provincia" name="provincia.idUbigeo" class='form-control'>
+				<select id="id_provincia" name="" class='form-control'>
 					<option value=" ">[Seleccione Provincia]</option>    
 				</select>
 		    </div>
 		     <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
-				<select id="id_distrito" name="distrito.idUbigeo" class='form-control'>
+				<select id="id_distrito" name="" class='form-control'>
 					<option value=" ">[Seleccione Distrito]</option>    
 				</select>
 		    </div>
 			
-			<div class="form-group">
-				<button id="id_registrar" type="button" class="btn btn-primary" >REGISTRAR</button>
+			<div class="row">
+				<div class="form-group col-md-12" align="center">
+					<button id="id_registrar" type="button" class="btn btn-primary" >Registra</button>
+				</div>
 			</div>
 	</form>
 	
@@ -112,7 +114,7 @@ $("#id_registrar").click(function (){
 	
 });
 
-$.getJSON("listaDepartamentos",{}, function(data){
+$.getJSON('listaDepartamentos',{}, function(data){
 	$.each(data, function(i, item){
 		$("#id_departamento").append("<option value='"+ item +"'>"+ item+"</option>");
 	});
@@ -147,7 +149,122 @@ $("#id_provincia").change(function(){
 		});
 	});
 });
+function limpiar(){
+	$("#id_ruc").val('');
+	$("#id_razonsocial").val('');
+	$("#id_direccion").val('');
+	$("#id_telefono").val('');
+	$("#id_celular").val('');
+	$("#id_contacto").val('');
+	$("#id_departamento").val('');
+	$("#id_provincia").val('');
+}
 
+$('#id_form').bootstrapValidator({
+    message: 'This value is not valid',
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+    	razonsocial: {
+    		selector : '#id_razonsocial',
+            validators: {
+                notEmpty: {
+                    message: 'La razonsocial e es un campo obligatorio'
+                },
+               
+            }
+        },
+        direccion: {
+    		selector : '#id_direccion',
+            validators: {
+                notEmpty: {
+                    message: 'La direccion es un campo obligatorio'
+                },
+                
+	         
+            }
+        },
+        telefono: {
+    		selector : '#id_telefono',
+            validators: {
+            	notEmpty: {
+                    message: 'El telefono es un campo obligatorio'
+                },
+               
+	         
+            }
+        },
+        celular: {
+    		selector : '#id_celular',
+            validators: {
+            	notEmpty: {
+                    message: 'El celular es un campo obligatorio'
+                },
+               
+	        
+            }
+        },
+        contacto: {
+    		selector : '#id_contacto',
+            validators: {
+            	notEmpty: {
+                    message: 'El contacto es un campo obligatorio'
+                },
+               
+	        
+            }
+        },
+       
+       departamento: {
+    		selector : '#id_departamento',
+            validators: {
+            	notEmpty: {
+                    message: 'El departamento es un campo obligatorio'
+                },
+               
+	        
+            }
+        },
+       
+        provincia: {
+    		selector : '#id_provincia',
+            validators: {
+            	notEmpty: {
+                    message: 'La provincia es un campo obligatorio'
+                },
+               
+	        
+            }
+        },
+        distrito: {
+    		selector : '#id_distrito',
+            validators: {
+            	notEmpty: {
+                    message: 'El distrito es un campo obligatorio'
+                },
+               
+	        
+            }
+        },
+        ruc: {
+    		selector : '#id_ruc',
+            validators: {
+                notEmpty: {
+                    message: 'El ruc e es un campo obligatorio'
+                },
+               
+            }
+        },
+       
+       
+       
+ 
+    	
+    }   
+});
 
 </script>   		
 </body>
