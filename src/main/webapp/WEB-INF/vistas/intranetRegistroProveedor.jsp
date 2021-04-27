@@ -68,14 +68,7 @@
 				</select>
 		    </div>
 		    
-		   	 <div class="form-group col-md-6">
-					<label class="control-label" for="id_Cliente">Cliente</label>
-					<select id="id_Cliente" name="cliente.id_cliente" class='form-control'>
-						<option value=" ">[Seleccione]</option>    
-					</select>
-			    </div>
-		    
-		   <div class="form-group">
+		   	 <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
 				<select id="id_distrito" name="" class='form-control'>
 					<option value=" ">[Seleccione Distrito]</option>    
