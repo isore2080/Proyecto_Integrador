@@ -63,14 +63,20 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_departamento">Departamento</label>
-				<select id="id_departamento" name="" class='form-control'>
+				<select id="id_departamento" name="departamento.idUbigeo" class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
 		    
 		   	 <div class="form-group">
+				<label class="control-label" for="id_provincia">Provincia</label>
+				<select id="id_provincia" name="provincia.idUbigeo" class='form-control'>
+					<option value=" ">[Seleccione Provincia]</option>    
+				</select>
+		    </div>
+		     <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
-				<select id="id_distrito" name="" class='form-control'>
+				<select id="id_distrito" name="distrito.idUbigeo" class='form-control'>
 					<option value=" ">[Seleccione Distrito]</option>    
 				</select>
 		    </div>

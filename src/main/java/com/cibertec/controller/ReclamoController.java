@@ -1,5 +1,7 @@
 package com.cibertec.controller;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +48,10 @@ public class ReclamoController {
 	@RequestMapping("/registraReclamo")
 	public Map<String, Object> insertaReclamo(Reclamo obj){
 		Map<String, Object> salida = new HashMap<>();
+		
+		Date fecha=new Date();
+	     Timestamp ts=new Timestamp(fecha.getTime());  
+	     obj.setFechaRegistro(ts);
 		
 		Reclamo objSalida = Reclamoservicio.insertaReclamo(obj);
 		if (objSalida == null) {

@@ -50,13 +50,13 @@
 			<div class="row">
 			    <div class="form-group col-md-6">
 					<label class="control-label" for="id_Cliente">Cliente</label>
-					<select id="id_Cliente" name="cliente.id_cliente" class='form-control'>
+					<select id="id_Cliente" name="cliente.idCliente" class='form-control'>
 						<option value=" ">[Seleccione]</option>    
 					</select>
 			    </div>
 				<div class="form-group col-md-3">
 					<label class="control-label" for="id_TipoReclamo">Tipo Reclamo</label>
-					<select id="id_TipoReclamo" name="reclamo.id_TipoReclamo" class='form-control'>
+					<select id="id_TipoReclamo" name="tipoReclamo.idTipoReclamo" class='form-control'>
 						<option value=" ">[Seleccione]</option>    
 					</select>
 			    </div>
@@ -147,7 +147,7 @@ $('#id_form').bootstrapValidator({
             }
         },
         cliente: {
-    		selector : '#id_cliente',
+    		selector : '#id_Cliente',
             validators: {
             	notEmpty: {
                     message: 'El cliente es un campo obligatorio'
