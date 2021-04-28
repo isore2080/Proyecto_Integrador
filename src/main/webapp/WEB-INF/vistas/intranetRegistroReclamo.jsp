@@ -55,7 +55,7 @@
 					</select>
 			    </div>
 				<div class="form-group col-md-3">
-					<label class="control-label" for="id_TipoReclamo">Tipo ReclamoO</label>
+					<label class="control-label" for="id_TipoReclamo">Tipo ReclamoS</label>
 					<select id="id_TipoReclamo" name="tipoReclamo.idTipoReclamo" class='form-control'>
 						<option value=" ">[Seleccione]</option>    
 					</select>
