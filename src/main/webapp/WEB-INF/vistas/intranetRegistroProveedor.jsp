@@ -76,7 +76,7 @@
 		    </div>
 		     <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
-				<select id="id_distrito" name="" class='form-control'>
+				<select id="id_distrito" name="" class='form-control'name="ubigeo.idUbigeo" >
 					<option value=" ">[Seleccione Distrito]</option>    
 				</select>
 		    </div>
@@ -93,10 +93,10 @@
 <script type="text/javascript">
 $("#id_registrar").click(function (){ 
 
-	var validator = $('#id_form').data('bootstrapValidator');
-	validator.validate();
+//	var validator = $('#id_form').data('bootstrapValidator');
+//	validator.validate();
 
-	if (validator.isValid()){
+//	if (validator.isValid()){
 		$.ajax({
 			type: 'POST',  
 			data: $("#id_form").serialize(),
@@ -110,7 +110,7 @@ $("#id_registrar").click(function (){
 				mostrarMensaje(MSG_ERROR);
 			}
 		});
-	}
+//	}
 	
 });
 
