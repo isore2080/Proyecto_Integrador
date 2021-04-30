@@ -63,20 +63,20 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_departamento">Departamento</label>
-				<select id="id_departamento" name="" class='form-control'>
+				<select id="id_departamento" name="ubigeo.departamento" class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
 		    
 		   	 <div class="form-group">
 				<label class="control-label" for="id_provincia">Provincia</label>
-				<select id="id_provincia" name="" class='form-control'>
+				<select id="id_provincia" name="ubigeo.provincia" class='form-control'>
 					<option value=" ">[Seleccione Provincia]</option>    
 				</select>
 		    </div>
 		     <div class="form-group">
 				<label class="control-label" for="id_distrito">Distrito</label>
-				<select id="id_distrito" name="" class='form-control'name="ubigeo.idUbigeo" >
+				<select id="id_distrito"  class='form-control'name="ubigeo.distrito" >
 					<option value=" ">[Seleccione Distrito]</option>    
 				</select>
 		    </div>
@@ -114,8 +114,8 @@ $("#id_registrar").click(function (){
 	
 });
 
-$.getJSON('listaDepartamentos',{}, function(data){
-	$.each(data, function(i, item){
+$.getJSON('listaDepartamentos',{}, function(data){debugger
+	$.each(data, function(i, item){debugger
 		$("#id_departamento").append("<option value='"+ item +"'>"+ item+"</option>");
 	});
 });

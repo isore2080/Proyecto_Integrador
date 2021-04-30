@@ -21,6 +21,7 @@ public class ProveedorController {
 	@RequestMapping("/registroProveedor")
 		public HashMap<String, Object> registrar(Proveedor obj){
 		HashMap<String, Object> salida = new HashMap<>();
+		obj.getUbigeo().setIdUbigeo(Integer.parseInt(obj.getUbigeo().getDistrito()));
 		Proveedor objSalida= servicio.insertaProveedor(obj);
 		if (objSalida == null) {
 			salida.put("MENSAJE", "Registro erróneo");
