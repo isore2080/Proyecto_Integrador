@@ -176,7 +176,7 @@ $('#id_form').bootstrapValidator({
                     message: 'La razonsocial e es un campo obligatorio'
                 },
                 stringLength :{
-                	message:'El razonsocial es de 5 a 100 caracteres',
+                	message:'El razonsocial es de 5 a 40 caracteres',
                 	min : 5,
                 	max : 100
                 }
@@ -186,7 +186,7 @@ $('#id_form').bootstrapValidator({
     		selector : '#id_direccion',
             validators: {
                 notEmpty: {
-                    message: 'La direccion es un campo obligatorio de 5 a 100 caracteres'
+                    message: 'La direccion es un campo obligatorio de 5 a 40 caracteres'
                 },
                 
 	         
