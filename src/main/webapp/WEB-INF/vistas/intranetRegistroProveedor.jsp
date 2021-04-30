@@ -33,12 +33,12 @@
 
 			<div class="form-group">
 				<label class="control-label" for="id_razonsocial">Razon Social</label>
-				<input class="form-control" type="text" id="id_razonsocial" name="razonsocial" placeholder="Ingrese la razon social" maxlength="40">    
+				<input class="form-control" type="text" id="id_razonsocial" name="razonsocial" placeholder="Ingrese la razon social" maxlength="50">    
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label" for="id_ruc">ruc</label>
-				<input class="form-control" type="text" id="id_ruc" name="ruc" placeholder="Ingrese el ruc" maxlength="">    
+				<input class="form-control" type="text" id="id_ruc" name="ruc" placeholder="Ingrese el ruc" maxlength="11">    
 			</div>
 			
 			<div class="form-group">
@@ -58,7 +58,7 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_contacto">contacto</label>
-				<input class="form-control" type="text" id="id_contacto" name="contacto" placeholder="Ingrese el contacto" maxlength="100">    
+				<input class="form-control" type="text" id="id_contacto" name="contacto" placeholder="Ingrese el contacto" maxlength="30">    
 			</div>
 			
 			<div class="form-group">
@@ -93,10 +93,10 @@
 <script type="text/javascript">
 $("#id_registrar").click(function (){ 
 
-//	var validator = $('#id_form').data('bootstrapValidator');
-//	validator.validate();
+	var validator = $('#id_form').data('bootstrapValidator');
+	validator.validate();
 
-//	if (validator.isValid()){
+	if (validator.isValid()){
 		$.ajax({
 			type: 'POST',  
 			data: $("#id_form").serialize(),
@@ -110,7 +110,7 @@ $("#id_registrar").click(function (){
 				mostrarMensaje(MSG_ERROR);
 			}
 		});
-//	}
+	}
 	
 });
 
@@ -158,6 +158,7 @@ function limpiar(){
 	$("#id_contacto").val('');
 	$("#id_departamento").val('');
 	$("#id_provincia").val('');
+	$("#id_distrito").val('');
 }
 
 $('#id_form').bootstrapValidator({
@@ -174,14 +175,18 @@ $('#id_form').bootstrapValidator({
                 notEmpty: {
                     message: 'La razonsocial e es un campo obligatorio'
                 },
-               
+                stringLength :{
+                	message:'El razonsocial es de 5 a 100 caracteres',
+                	min : 5,
+                	max : 100
+                }
             }
         },
         direccion: {
     		selector : '#id_direccion',
             validators: {
                 notEmpty: {
-                    message: 'La direccion es un campo obligatorio'
+                    message: 'La direccion es un campo obligatorio de 5 a 100 caracteres'
                 },
                 
 	         
@@ -191,9 +196,13 @@ $('#id_form').bootstrapValidator({
     		selector : '#id_telefono',
             validators: {
             	notEmpty: {
-                    message: 'El telefono es un campo obligatorio'
+                    message: 'El telefono es un campo obligatorio de 7 caracteres'
                 },
-               
+                stringLength :{
+                	message:'El telefono es de 7 caracteres',
+                	min : 7,
+                	max : 100
+                }
 	         
             }
         },
@@ -201,9 +210,13 @@ $('#id_form').bootstrapValidator({
     		selector : '#id_celular',
             validators: {
             	notEmpty: {
-                    message: 'El celular es un campo obligatorio'
+                    message: 'El celular es un campo obligatorio de 9 caracteres'
                 },
-               
+                stringLength :{
+                	message:'El celular es de 9 caracteres',
+                	min : 9,
+                	max : 100
+                }
 	        
             }
         },
@@ -253,7 +266,7 @@ $('#id_form').bootstrapValidator({
     		selector : '#id_ruc',
             validators: {
                 notEmpty: {
-                    message: 'El ruc e es un campo obligatorio'
+                    message: 'El ruc e es un campo obligatorio de 11 caracteres'
                 },
                
             }
