@@ -48,12 +48,12 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_telefono">telefono</label>
-				<input class="form-control" type="text" id="id_telefono" name="telefono" placeholder="Ingrese el telefono" maxlength="100">    
+				<input class="form-control" type="text" id="id_telefono" name="telefono" placeholder="Ingrese el telefono" maxlength="7">    
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label" for="id_celular">celular</label>
-				<input class="form-control" type="text" id="id_celular" name="celular" placeholder="Ingrese el celular" maxlength="100">    
+				<input class="form-control" type="text" id="id_celular" name="celular" placeholder="Ingrese el celular" maxlength="9">    
 			</div>
 			
 			<div class="form-group">
