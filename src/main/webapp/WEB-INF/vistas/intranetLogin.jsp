@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrapValidator.css">
 
-<title>Intranet</title>
+<title>Veterinaria</title>
 </head>   
 <body>    
 
@@ -38,21 +38,31 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Ingreso al Sistema de Intranet</h3>
+                        		<center>
+                        			<h3>Ingreso al Sistema de Veterinaria</h3>
+                        		
+                        			<img src= "images/veterinaria.png">
+                        			
                             		<p>Ingrese su Usuario y Contraseña:</p>
+                            			  </center>
                         		</div>
                             </div>
                             <div class="form-bottom">
 			                    <form id="id_form"  action="login" method="post" class="login-form">
 			                    	<div class="form-group">
+			                    	
 			                    		<label class="sr-only" for="form-username">Usuario</label>
-			                        	<input type="text" name="login" placeholder="Ingrese Usuario" class="form-username form-control" id="form-username" maxlength="20" value="luis">
+			                        	<input type="text" name="login" placeholder="Ingrese Usuario" class="form-username form-control" id="form-username" maxlength="20" value="carlos">
+			                        	
 			                        </div>
 			                        <div class="form-group">
+			                     
 			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="password" placeholder="Ingrese Contraseña" class="form-password form-control" id="form-password" maxlength="20" value="luis">
+			                        	<input type="password" name="password" placeholder="Ingrese Contraseña" class="form-password form-control" id="form-password" maxlength="20" value="carlos">
 			                        </div>
-			                        <button type="submit" class="btn btn-primary">Ingresar</button>
+			                         
+			                        <button type="submit" class="btn btn-primary" >Ingresar</button>
+			                
 			                    </form>
 		                    </div>
                         </div>   

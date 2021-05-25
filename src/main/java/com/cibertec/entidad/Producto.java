@@ -29,8 +29,7 @@ public class Producto {
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idPais")
-	private Pais pais;
+	
 
 	public int getIdProducto() {
 		return idProducto;
@@ -80,14 +79,7 @@ public class Producto {
 		this.marca = marca;
 	}
 
-	public Pais getPais() {
-		return pais;
-	}
-
-	public void setPais(Pais pais) {
-		this.pais = pais;
-	}
-
+	
 	
 	
 

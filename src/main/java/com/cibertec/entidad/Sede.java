@@ -32,7 +32,7 @@ public class Sede {
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idPais")
-	private Pais pais;
+	
 
 	public int getIdSede() {
 		return idSede;
@@ -66,13 +66,7 @@ public class Sede {
 		this.fechaRegistro = fechaRegistro;
 	}
 
-	public Pais getPais() {
-		return pais;
-	}
-
-	public void setPais(Pais pais) {
-		this.pais = pais;
-	}
+	
 	
 	
 	

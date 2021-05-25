@@ -22,14 +22,16 @@
 <link rel="stylesheet" href="css/bootstrapValidator.css"/>
 
 
-<title>Intranet</title>
+<title>Veterinaria</title>
 </head>
 <body>
-       
+       <style type="text/css">
+body {background:url("images/vete2.jpg");}
+</style>
 <jsp:include page="intranetCabecera.jsp" />
 
 <div class="container" style="margin-top: 5%">
-<h3>Intranet Sistema Delivery</h3>
+<h3>Sistema Veterinaria</h3>
 <br><br>
 <h4>Bienvenido Sr(a): ${sessionScope.objUsuario.nombreCompleto}</h4><br>                
 <h4>DNI: ${sessionScope.objUsuario.dni}</h4><br>

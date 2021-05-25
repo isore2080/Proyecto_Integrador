@@ -12,21 +12,21 @@ import com.cibertec.repositorio.UbigeoRepositorio;
 public class UbigeoServicioImpl implements UbigeoServicio {
 
 	@Autowired
-	private UbigeoRepositorio repository;
+	UbigeoRepositorio repositorio;
 
 	@Override
-	public List<String> listaDepartamentos() {
-		return repository.listaDepartamentos();
+	public List<Ubigeo> listaDepartamentos() {
+		return repositorio.listaDepartamentos();
 	}
 
 	@Override
-	public List<String> listaProvincias(String departamento) {
-		return repository.listaProvincias(departamento);
+	public List<Ubigeo> listaProvincia(String departamento) {
+		return repositorio.listaProvincia(departamento);
 	}
 
 	@Override
-	public List<Ubigeo> listaDistritos(String departamento, String provincia) {
-		return repository.listaDistritos(departamento, provincia);
+	public List<Ubigeo> listaDistrito(String departamento, String provincia) {
+		return repositorio.listaDistrito(departamento, provincia);
 	}
 
 }

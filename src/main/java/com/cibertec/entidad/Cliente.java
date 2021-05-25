@@ -30,7 +30,7 @@ public class Cliente {
 	private Date fechaRegistro;
 
 	private String direccion;
-	private byte estado;
+
 
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -87,14 +87,7 @@ public class Cliente {
 		this.direccion = direccion;
 	}
 
-	public byte getEstado() {
-		return estado;
-	}
-
-	public void setEstado(byte estado) {
-		this.estado = estado;
-	}
-
+	
 	public Ubigeo getUbigeo() {
 		return ubigeo;
 	}

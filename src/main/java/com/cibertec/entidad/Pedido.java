@@ -1,4 +1,4 @@
-package com.cibertec.entidad;
+ package com.cibertec.entidad;
 
 import java.util.Date;
 
@@ -21,7 +21,7 @@ public class Pedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int iPedido;
+	private int idPedido;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaRegistro;
@@ -42,12 +42,12 @@ public class Pedido {
 	@JoinColumn(name = "idubigeo")
 	private Ubigeo ubigeo;
 
-	public int getiPedido() {
-		return iPedido;
+	public int getidPedido() {
+		return idPedido;
 	}
 
-	public void setiPedido(int iPedido) {
-		this.iPedido = iPedido;
+	public void setiPedido(int idPedido) {
+		this.idPedido = idPedido;
 	}
 
 	public Date getFechaRegistro() {

@@ -16,8 +16,8 @@ public class EnlaceController {
 	@RequestMapping("/verRegistroMarca")
 	public String verRegistraMarca() {	return "intranetRegistroMarca";	}
 	
-	@RequestMapping("/verRegistroProveedor")
-	public String verRegistraProveedor() {	return "intranetRegistroProveedor";	}
+	@RequestMapping("/verRegistroPedido")
+	public String verRegistroPedido() {	return "intranetRegistroPedido";	}
 	
 	@RequestMapping("/verRegistroProducto")
 	public String verRegistraProducto() {	return "intranetRegistroProducto";	}
@@ -34,6 +34,12 @@ public class EnlaceController {
 	@RequestMapping("/verRegistroTipoReclamo")
 	public String verRegistroTipoReclamo() {	return "intranetRegistroTipoReclamo";	}
 	
-	@RequestMapping("/verRegistroPais")
-	public String verRegistroPais() {	return "intranetRegistroPais";	}
+	
+	@RequestMapping("/verRegistraMascota")
+	public String verRegistra() {       return "registraMascota";
+	}
+	@RequestMapping("/verCrudPedido")
+	public String listaPedido() {       return "intranetConsultaPedido";
+	}
+	
 }
